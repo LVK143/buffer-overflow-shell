@@ -2,12 +2,12 @@
 #include <string.h>
 
 void vuln() {
-      char buffer[64];
-      gets (buffer);
+    char buffer[64];
+    gets(buffer); // 💀 Vulnerable: no bounds check
 }
 
 int main() {
-    printf("Welcome to Vulnerabilty  program!\n");
+    printf("Welcome to vulnerable program!\n");
     vuln();
-   return 0;
+    return 0;
 }
